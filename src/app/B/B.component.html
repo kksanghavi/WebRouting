@@ -1,0 +1,29 @@
+<form
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        magic="B"
+        class="BProps mgColor11"
+    >
+        <label
+            magic="Label2"
+            class="Label2Props"
+        >
+            B_v1:
+            </label>
+            <div>
+                <input
+                    type="text"
+                    formControlName="B_v1"
+                    magic="B_v1"
+                    class="B_v1Props"
+                    pattern="^.{0,10}$"
+                />
+                <div *ngIf="(screenFormGroup.get('B_v1').touched) && (screenFormGroup.get('B_v1').hasError('pattern')
+                )">
+                    <p>control status: {{ screenFormGroup.get('B_v1').errors | json }}</p>
+                </div>
+            </div>
+            </div>
+            </form>

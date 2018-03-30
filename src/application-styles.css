@@ -1,0 +1,352 @@
+@import url("magic-styles.css");
+
+.mgColor1 {
+   background-color: rgba(255,255,255,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor1 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor1:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(255,255,255,255);
+ }
+
+.mgColor2 {
+   background-color: rgba(255,255,255,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor2 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor2:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(255,255,255,255);
+ }
+
+.mgColor3 {
+   background-color: rgba(171,171,171,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor3 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor3:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(171,171,171,255);
+ }
+
+.mgColor4 {
+   background-color: rgba(0,255,0,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor4 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor4:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(0,255,0,255);
+ }
+
+.mgColor5 {
+   background-color: rgba(0,0,255,255);
+   color: rgba(255,255,0,255);
+ }
+
+.mgBorderColor5 {
+   border-color: rgba(255,255,0,255);
+ }
+
+.mgFocusColor5:focus {
+   color: rgba(255,255,0,255);
+   background-color: rgba(0,0,255,255);
+ }
+
+.mgColor6 {
+   background-color: rgba(255,255,255,255);
+   color: rgba(255,0,0,255);
+ }
+
+.mgBorderColor6 {
+   border-color: rgba(255,0,0,255);
+ }
+
+.mgFocusColor6:focus {
+   color: rgba(255,0,0,255);
+   background-color: rgba(255,255,255,255);
+ }
+
+.mgColor7 {
+   background-color: rgba(255,255,0,255);
+   color: rgba(255,0,0,255);
+ }
+
+.mgBorderColor7 {
+   border-color: rgba(255,0,0,255);
+ }
+
+.mgFocusColor7:focus {
+   color: rgba(255,0,0,255);
+   background-color: rgba(255,255,0,255);
+ }
+
+.mgColor8 {
+   background-color: rgba(255,0,0,255);
+   color: rgba(255,255,255,255);
+ }
+
+.mgBorderColor8 {
+   border-color: rgba(255,255,255,255);
+ }
+
+.mgFocusColor8:focus {
+   color: rgba(255,255,255,255);
+   background-color: rgba(255,0,0,255);
+ }
+
+.mgColor9 {
+   background-color: rgba(240,240,240,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor9 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor9:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(240,240,240,255);
+ }
+
+.mgColor10 {
+   background-color: rgba(240,240,240,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor10 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor10:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(240,240,240,255);
+ }
+
+.mgColor11 {
+   background-color: rgba(240,240,240,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor11 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor11:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(240,240,240,255);
+ }
+
+.mgColor12 {
+   background-color: rgba(255,0,0,50);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor12 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor12:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(255,0,0,50);
+ }
+
+.mgColor13 {
+   background-color: rgba(0,255,0,255);
+   color: rgba(255,0,0,255);
+ }
+
+.mgBorderColor13 {
+   border-color: rgba(255,0,0,255);
+ }
+
+.mgFocusColor13:focus {
+   color: rgba(255,0,0,255);
+   background-color: rgba(0,255,0,255);
+ }
+
+.mgColor14 {
+   background-color: transparent;
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor14 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor14:focus {
+   color: rgba(0,0,0,255);
+   background-color: transparent;
+ }
+
+.mgColor15 {
+   background-color: rgba(0,255,255,255);
+   color: rgba(255,0,0,255);
+ }
+
+.mgBorderColor15 {
+   border-color: rgba(255,0,0,255);
+ }
+
+.mgFocusColor15:focus {
+   color: rgba(255,0,0,255);
+   background-color: rgba(0,255,255,255);
+ }
+
+.mgColor16 {
+   background-color: rgba(240,240,240,255);
+   color: rgba(109,109,109,255);
+ }
+
+.mgBorderColor16 {
+   border-color: rgba(109,109,109,255);
+ }
+
+.mgFocusColor16:focus {
+   color: rgba(109,109,109,255);
+   background-color: rgba(240,240,240,255);
+ }
+
+.mgColor17 {
+   background-color: transparent;
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor17 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor17:focus {
+   color: rgba(0,0,0,255);
+   background-color: transparent;
+ }
+
+.mgColor18 {
+   background-color: transparent;
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor18 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor18:focus {
+   color: rgba(0,0,0,255);
+   background-color: transparent;
+ }
+
+.mgColor19 {
+   background-color: rgba(255,255,255,255);
+   color: rgba(0,0,0,255);
+ }
+
+.mgBorderColor19 {
+   border-color: rgba(0,0,0,255);
+ }
+
+.mgFocusColor19:focus {
+   color: rgba(0,0,0,255);
+   background-color: rgba(255,255,255,255);
+ }
+
+.mgFont1 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont2 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont3 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont4 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont5 {
+   font-family:Microsoft Sans Serif;
+   font-size:14px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont6 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont7 {
+   font-family:Courier New;
+   font-size:12px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont8 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont9 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont10 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont11 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
+.mgFont12 {
+   font-family:Microsoft Sans Serif;
+   font-size:8px;
+   font-style:normal;
+   font-weight:normal;
+ }
+
