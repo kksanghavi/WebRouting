@@ -17,7 +17,7 @@ export class TimeFormatPipe extends DatePipe implements PipeTransform {
     let mask: string = this._task.GetControlPictureMask (controlId);
     let formatStr: StringBuilder = new StringBuilder ();
 
-    if (typeof value !== "undefined") {
+    if (typeof value !== "undefined" && mask !== null) {
       for (let i: number = 0; i < mask.length;) {
         switch (mask.charCodeAt(i)) {
           case PICInterface.PIC_HH:

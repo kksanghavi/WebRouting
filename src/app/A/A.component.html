@@ -21,7 +21,7 @@
                     pattern="^.{0,10}$"
                 />
                 <div *ngIf="(screenFormGroup.get('A_v1').touched) && (screenFormGroup.get('A_v1').hasError('pattern')
-                )">
+                    )">
                     <p>control status: {{ screenFormGroup.get('A_v1').errors | json }}</p>
                 </div>
             </div>

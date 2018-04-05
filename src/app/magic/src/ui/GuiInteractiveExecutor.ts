@@ -34,6 +34,7 @@ export class GuiInteractiveExecutor {
   }
 
 
+
   private  onValue(): void {
     let result = this.task.getFormControl("" + this.command._line, this.command.controlName);
     let val: any;
@@ -42,6 +43,9 @@ export class GuiInteractiveExecutor {
     }
     else if (this.task.isTableControl(this.command.controlName))
       val = this.task.getValue(this.command.controlName, "" + this.command._line);
+
+    if(val.constructor.name === "Array")
+      val =  (<Array<any>>val).join(',');
     val = this.component.ConvertValToNative(this.command.controlName, this.command._line, val);
 
     this.command._mgValue.obj = val;

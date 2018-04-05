@@ -7,10 +7,10 @@
         class="RootProps"
     >
         <label
-            magic="Label2"
-            class="Label2Props"
+            magic="tmpID3"
+            class="tmpID3Props"
         >
-            root_v1:
+            {{mgGetText('tmpID3')}}
             </label>
             <div>
                 <input
@@ -21,7 +21,7 @@
                     pattern="^.{0,5}$"
                 />
                 <div *ngIf="(screenFormGroup.get('root_v1').touched) && (screenFormGroup.get('root_v1').hasError('pattern')
-                )">
+                    )">
                     <p>control status: {{ screenFormGroup.get('root_v1').errors | json }}</p>
                 </div>
             </div>
@@ -37,14 +37,27 @@
                 >
                     {{mgGetValue('Button5')}}
                     </button>
-                    <div class="Subform3Props">
-                        <ndc-dynamic
-                            magic="Subform3"
-                            class="Subform3Props"
-                            [ndcDynamicComponent]="mgGetComp('Subform3')"
-                            [ndcDynamicInputs]="mgGetParameters('Subform3')"
-                        >
-                            </ndc-dynamic>
-                    </div>
-                    </div>
-                    </form>
+                    <button
+                        magic="Button7"
+                        class="Button7Props"
+                    >
+                        {{mgGetValue('Button7')}}
+                        </button>
+                        <div class="Subform3Props">
+                            <ndc-dynamic
+                                magic="Subform3"
+                                class="Subform3Props"
+                                [ndcDynamicComponent]="mgGetComp('Subform3')"
+                                [ndcDynamicInputs]="mgGetParameters('Subform3')"
+                            >
+                                </ndc-dynamic>
+                        </div>
+                        <div class="RouterOutlet1Props">
+                            <router-outlet
+                                magic="RouterOutlet1"
+                                class="RouterOutlet1Props"
+                            >
+                                </router-outlet>
+                        </div>
+                        </div>
+                        </form>
