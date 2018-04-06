@@ -6,8 +6,8 @@ export class StylesMapManager {
   static StylesMap: Map<string, any> = new Map<string, any>(
     [
       [MagicProperties.LineDivider, new Map<any, any>([[true, "solid"], [false, "hidden"]])],
-      [MagicProperties.ImageFile, "url('\" + {0} + \"')"],
-      [MagicProperties.Wallpaper, "url('\" + {0} + \"')"]
+      [MagicProperties.ImageFile, "url('\{0}\')"],
+      [MagicProperties.Wallpaper, "url('\{0}\')"]
     ]
   );
 

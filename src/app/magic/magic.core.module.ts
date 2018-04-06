@@ -5,6 +5,7 @@ import {MagicFullControlDirective} from "./src/ui/magic-fullcontrol-directive.di
 import {MagicNoControlDirective} from "./src/ui/magic-nocontrol-directive.directive";
 import {MagicDefaultValueAccessor, MagicFormControlNameDirective} from "./src/ui/magic.form-control-name.directive";
 import {MagicModalWindow} from "./src/ui/magic-modal/magic-modal-window";
+import {MagicRouterContainer} from './src/ui/MagicRouterContainer';
 
 import {DynamicModule} from 'ng-dynamic-component';
 
@@ -25,7 +26,8 @@ const decs = [
   MagicModalWindow,
   AlphaDirective,
   DateFormatPipe,
-  TimeFormatPipe
+  TimeFormatPipe,
+  MagicRouterContainer
 
 ];
 

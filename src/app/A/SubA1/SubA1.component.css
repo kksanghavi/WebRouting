@@ -1,6 +1,8 @@
 /*this is a component css*/
 
-.SubA1Props {}
+.SubA1Props {
+    background-repeat: repeat;
+}
 
 .Label2Props {
     overflow: hidden;

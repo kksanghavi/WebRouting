@@ -1,8 +1,10 @@
 /*this is a component css*/
 
-.RootProps {}
+.RootProps {
+    background-repeat: repeat;
+}
 
-.tmpID3Props {
+.tmpID0Props {
     overflow: hidden;
 }
 

@@ -1,6 +1,8 @@
 /*this is a component css*/
 
-.BProps {}
+.BProps {
+    background-repeat: repeat;
+}
 
 .Label2Props {
     overflow: hidden;

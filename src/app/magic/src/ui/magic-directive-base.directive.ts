@@ -62,8 +62,11 @@ export class MagicDirectiveBase implements OnInit {
 
     this.htmlElement.addEventListener('change', ( e) => {
       let guiEvent: GuiEvent = new GuiEvent("selectionchanged", this.id, this.rowId);
-      guiEvent.Value = (<any>(event.target)).selectedIndex.toString();
-      this.task.insertEvent(guiEvent);
+
+      if ((<any>(event.target)).selectedIndex  !== undefined) {
+        guiEvent.Value = (<any>(event.target)).selectedIndex.toString();
+        this.task.insertEvent(guiEvent);
+      }
 
     });
   }
@@ -109,7 +112,7 @@ export class MagicDirectiveBase implements OnInit {
         break;
 
       case CommandType.CREATE_SUB_FORM:
-        this.component.addSubformComp(command.CtrlName, command.userDropFormat.toString(), command.str, command.fileName);
+        this.component.addSubformComp(command.CtrlName, command.userDropFormat.toString(), command.str, command.fileName, command.contextID, command.Bool1);
         break;
 
       case CommandType.SET_FOCUS:
