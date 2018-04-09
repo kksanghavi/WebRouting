@@ -25,7 +25,11 @@ export class MagicDirectiveBase implements OnInit {
               private vcRef: ViewContainerRef,) {
 
     this.htmlElement = this.element.nativeElement;
-    this.component = (<any>this.vcRef)._view.component as BaseTaskMagicComponent;
+    let c = (<any>this.vcRef)._view;
+    while (!(c instanceof BaseTaskMagicComponent)) {
+      c = c.component;
+    }
+    this.component = c;
   }
 
   get task() {
@@ -133,6 +137,20 @@ export class MagicDirectiveBase implements OnInit {
           this.renderer.setAttribute(this.htmlElement, command.Operation, command.str);
 
         break;
+
+      case HtmlProperties.Enabled:
+      let rowId: string = (command.line || 0).toString();
+      let controlId = command.CtrlName;
+      let c = this.task.getFormControl(rowId, controlId);
+
+      if (!isNullOrUndefined(c)) {
+        if (command.obj1)
+          c.enable();
+        else
+          c.disable();
+      }
+
+      break;
     }
   }
 }

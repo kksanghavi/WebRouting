@@ -14,6 +14,7 @@ import {ThemeModule} from './src/ui/theme/theme.module';
 import {AlphaDirective} from './src/ui/magic-alpha-directive.directive';
 import {DateFormatPipe} from './src/ui/magic-datetransform-pipe';
 import {TimeFormatPipe} from './src/ui/magic-timetransform-pipe';
+import {Subform} from './src/ui/subform-component';
 
 const comps = ComponentsList.getAllComponents();
 
@@ -27,7 +28,8 @@ const decs = [
   AlphaDirective,
   DateFormatPipe,
   TimeFormatPipe,
-  MagicRouterContainer
+  MagicRouterContainer,
+  Subform
 
 ];
 

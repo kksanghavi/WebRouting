@@ -51,7 +51,7 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
 
   constructor(protected ref: ChangeDetectorRef,
               protected task: TaskMagicService,
-              private router: Router,
+              protected router: Router,
               //protected magic:MagicEngine
 
   ) {
@@ -124,7 +124,7 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
       if (inDefaultOutlet)
         this.router.navigate([routerPath]);
       else
-        this.router.navigate([{ outlets: { subformControlName: [routerPath] }}]);
+        this.router.navigate([{ outlets: { [subformControlName]: [routerPath] }}]);
     }
   }
 
@@ -453,6 +453,18 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
   {
     this.getRowsIfNeed(e.pageIndex, e.pageSize) ;
   }
+
+  sortData(e){
+    let direction: number = 0;
+    if (e.direction === 'asc')
+      direction = 0;
+    else if (e.direction === 'desc')
+      direction = 1;
+
+    let guiEvent: GuiEvent = new GuiEvent("columnSort", e.active, direction);
+    this.task.insertEvent(guiEvent);
+  }
+
   jsonData :string
   public createData()
   {

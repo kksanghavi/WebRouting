@@ -73,7 +73,7 @@ export class TaskMagicService {
   getFormControl(rowId: string, id: string): AbstractControl {
     let c: AbstractControl;
     let group: FormGroup = this.isTableControl(id) ? this.rows[rowId] : this.ScreenModeControls;
-    if (group.contains(id))
+    if (group.get(id))
       c = group.controls[id];
     return c;
   }
