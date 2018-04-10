@@ -10,16 +10,36 @@
 
 .root_v1Props {}
 
+.Label9Props {
+    overflow: hidden;
+}
+
+.Label10Props {
+    overflow: hidden;
+}
+
+.Label11Props {
+    overflow: hidden;
+}
+
 .Button4Props {}
 
 .Button5Props {}
 
 .Button7Props {}
 
+.Button12Props {}
+
+.Button13Props {}
+
 .Subform3Props {
     border: lightskyblue solid 1px;
 }
 
 .RouterOutlet1Props {
+    border: lightskyblue solid 1px;
+}
+
+.Subform8Props {
     border: lightskyblue solid 1px;
 }

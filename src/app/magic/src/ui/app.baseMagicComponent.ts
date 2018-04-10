@@ -19,7 +19,7 @@ import {GuiInteractiveExecutor} from './GuiInteractiveExecutor';
 
 import {TextEditDialogComponent} from "./TextEditDialog/textedit.dialog";
 
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'task-magic',
@@ -52,6 +52,7 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
   constructor(protected ref: ChangeDetectorRef,
               protected task: TaskMagicService,
               protected router: Router,
+              protected activateRoute: ActivatedRoute
               //protected magic:MagicEngine
 
   ) {
@@ -122,9 +123,9 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
       };
 
       if (inDefaultOutlet)
-        this.router.navigate([routerPath]);
+        this.router.navigate([routerPath], {relativeTo: this.activateRoute});
       else
-        this.router.navigate([{ outlets: { [subformControlName]: [routerPath] }}]);
+        this.router.navigate([{ outlets: { [subformControlName]: [routerPath] }}], {relativeTo: this.activateRoute});
     }
   }
 
