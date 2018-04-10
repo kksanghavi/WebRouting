@@ -153,6 +153,15 @@ export class TaskMagicService {
   }
 
 
+  ValidateControlValue(controlName: string, value: any): string {
+    return this.magic.ValidateControlValue(this.taskId, controlName, value);
+  }
+
+  GetRangedValue(controlName: string, value: string): string {
+    return this.magic.GetRangedValue(this.taskId, controlName, value);
+  }
+
+
   getProperty(controlId: string, prop: HtmlProperties, rowId?: string) {
     if (isNullOrUndefined(rowId))
       rowId = "0";

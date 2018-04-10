@@ -20,8 +20,10 @@
                     class="root_v1Props"
                     pattern="^.{0,5}$"
                 />
-                <div *ngIf="(screenFormGroup.get('root_v1').touched) && (screenFormGroup.get('root_v1').hasError('pattern')
-                    )">
+                <div *ngIf="(screenFormGroup.get('root_v1').touched) && (
+                        screenFormGroup.get('root_v1').hasError('pattern')
+                        
+                        )">
                     <p>control status: {{ screenFormGroup.get('root_v1').errors | json }}</p>
                 </div>
             </div>

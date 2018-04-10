@@ -20,8 +20,10 @@
                     class="subA1_v1Props"
                     pattern="^.{0,10}$"
                 />
-                <div *ngIf="(screenFormGroup.get('subA1_v1').touched) && (screenFormGroup.get('subA1_v1').hasError('pattern')
-                    )">
+                <div *ngIf="(screenFormGroup.get('subA1_v1').touched) && (
+                        screenFormGroup.get('subA1_v1').hasError('pattern')
+                        
+                        )">
                     <p>control status: {{ screenFormGroup.get('subA1_v1').errors | json }}</p>
                 </div>
             </div>

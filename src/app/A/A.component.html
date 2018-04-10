@@ -20,8 +20,10 @@
                     class="A_v1Props"
                     pattern="^.{0,10}$"
                 />
-                <div *ngIf="(screenFormGroup.get('A_v1').touched) && (screenFormGroup.get('A_v1').hasError('pattern')
-                    )">
+                <div *ngIf="(screenFormGroup.get('A_v1').touched) && (
+                        screenFormGroup.get('A_v1').hasError('pattern')
+                        
+                        )">
                     <p>control status: {{ screenFormGroup.get('A_v1').errors | json }}</p>
                 </div>
             </div>
@@ -31,12 +33,18 @@
             >
                 {{mgGetValue('Button4')}}
                 </button>
-                <div class="Subform3Props">
-                    <router-outlet
-                        magic="Subform3"
-                        class="Subform3Props"
-                    >
-                        </router-outlet>
-                </div>
-                </div>
-                </form>
+                <button
+                    magic="Button6"
+                    class="Button6Props"
+                >
+                    {{mgGetValue('Button6')}}
+                    </button>
+                    <div class="Subform3Props">
+                        <router-outlet
+                            magic="Subform3"
+                            class="Subform3Props"
+                        >
+                            </router-outlet>
+                    </div>
+                    </div>
+                    </form>
