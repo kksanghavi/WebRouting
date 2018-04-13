@@ -1,45 +1,119 @@
 /*this is a component css*/
 
 .RootProps {
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
     background-repeat: repeat;
 }
 
 .label1Props {
+    position: absolute;
+    top: 13px;
+    left: 6px;
+    height: 15px;
+    width: 41px;
     overflow: hidden;
 }
 
-.root_v1Props {}
+.root_v1Props {
+    position: absolute;
+    top: 13px;
+    left: 53px;
+    height: 20px;
+    width: 41px;
+}
 
 .Label9Props {
+    position: absolute;
+    top: 154px;
+    left: 13px;
+    height: 44px;
+    width: 110px;
     overflow: hidden;
 }
 
 .Label10Props {
+    position: absolute;
+    top: 388px;
+    left: 13px;
+    height: 44px;
+    width: 110px;
     overflow: hidden;
 }
 
 .Label11Props {
+    position: absolute;
+    top: 640px;
+    left: 13px;
+    height: 44px;
+    width: 110px;
     overflow: hidden;
 }
 
-.Button4Props {}
+.Button4Props {
+    position: absolute;
+    top: 17px;
+    left: 119px;
+    height: 22px;
+    width: 158px;
+}
 
-.Button5Props {}
+.Button5Props {
+    position: absolute;
+    top: 17px;
+    left: 295px;
+    height: 22px;
+    width: 158px;
+}
 
-.Button7Props {}
+.Button7Props {
+    position: absolute;
+    top: 17px;
+    left: 479px;
+    height: 22px;
+    width: 158px;
+}
 
-.Button12Props {}
+.Button12Props {
+    position: absolute;
+    top: 43px;
+    left: 119px;
+    height: 22px;
+    width: 158px;
+}
 
-.Button13Props {}
+.Button13Props {
+    position: absolute;
+    top: 43px;
+    left: 295px;
+    height: 22px;
+    width: 158px;
+}
 
 .Subform3Props {
+    position: absolute;
+    top: 71px;
+    left: 175px;
+    height: 210px;
+    width: 307px;
     border: lightskyblue solid 1px;
 }
 
 .RouterOutlet1Props {
+    position: absolute;
+    top: 305px;
+    left: 175px;
+    height: 210px;
+    width: 307px;
     border: lightskyblue solid 1px;
 }
 
 .Subform8Props {
+    position: absolute;
+    top: 557px;
+    left: 175px;
+    height: 210px;
+    width: 307px;
     border: lightskyblue solid 1px;
 }

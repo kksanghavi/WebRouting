@@ -198,8 +198,12 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
 
       case StorageAttribute.BOOLEAN: {
         let val1: boolean;
-        if (typeof val === 'string')
-          return NString.Equals(val, 'true', true) ? true : false;
+        if (typeof val === 'string') {
+          let ranges: string = this.task.GetFldRanges(controlId);
+          let found: number = ranges.indexOf(',');
+          let trueOption: string = ranges.substr(0, found);
+          return NString.Equals(val, trueOption, true);
+        }
         else
           return val;
       }

@@ -59,6 +59,10 @@ export class MagicEngine {
     return this.magic.ValidateControlValue(taskId, controlName, value);
   }
 
+  GetFldRanges(taskId: string, controlName: string): string {
+    return this.magic.GetFldRanges(taskId, controlName);
+  }
+  
   saveData(data:string)
   {
     //this.magic.saveData(data);

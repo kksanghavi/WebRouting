@@ -16,12 +16,17 @@ import {DateFormatPipe} from './src/ui/magic-datetransform-pipe';
 import {TimeFormatPipe} from './src/ui/magic-timetransform-pipe';
 import {RangeValidator} from './src/ui/magic-range-validator.directive';
 import {Subform} from './src/ui/subform-component';
+import {MagicCheckboxDirective, MatCheckboxDirective} from './src/ui/magic-checkbox.directive';
 
 const comps = ComponentsList.getAllComponents();
 
 
 const decs = [
   MagicFullControlDirective,
+
+  MagicCheckboxDirective,
+  MatCheckboxDirective,
+
   MagicNoControlDirective,
   MagicDefaultValueAccessor,
   MagicFormControlNameDirective,
