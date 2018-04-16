@@ -217,9 +217,8 @@ export class TaskMagicService {
   getValue(controlId: string, rowId?: string) {
     if (isNullOrUndefined(rowId))
       rowId = '0';
+    return this.Records.list.length > +rowId ?  this.Records.list[rowId].values[controlId] : "";
 
-    return this.Records.list[rowId].values[controlId];
-    // return this.Records.list[rowId].getValue(controlId);
   }
 
   setValue(controlId: string, rowId: string, value: any): void {
