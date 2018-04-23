@@ -9,6 +9,9 @@ export class ControlMetadata {
   removedClass: string;
   classes: string  ;
 
+  // user properties
+  userProperties: Map<string, any> = new Map();
+
   setClass(key, value) {
     // for no-control - hold the name of the class to be removed later
     if(this.classesMap[key] != '') {
@@ -101,7 +104,7 @@ export class Records {
   list:ControlsMetadata[]=[] ; //used for sequential access in table
   includesFirst:boolean;
   includesLast:boolean;
-
+  guiTopIndex:number;
 
   markRowAsCreated(row:number): void
   {
@@ -174,6 +177,23 @@ export class Records {
   fromJson(data: string) {
     var obj = JSON.parse(data);
     this.update(obj);
+  }
+
+  setGuiTopIndex(topIndex: number){
+    if (!this.includesFirst)
+      topIndex++;
+
+    this.guiTopIndex = topIndex;
+  }
+
+  getGuiTopIndex() : number
+  {
+    let topIndex:number = this.guiTopIndex;
+
+    if (!this.includesFirst)
+      topIndex--
+
+    return topIndex;
   }
 
 }

@@ -3,99 +3,116 @@
     [formGroup]="screenFormGroup"
 >
     <div
+        style="display: flex; flex-direction: column"
         magic="Root"
         class="RootProps"
     >
-        <label
-            magic="label1"
-            class="label1Props"
-        >
-            root_v1:
-            </label>
-            <div>
-                <input
-                    type="text"
-                    formControlName="root_v1"
-                    magic="root_v1"
-                    class="root_v1Props"
-                    pattern="^.{0,5}$"
-                />
-                <div *ngIf="(screenFormGroup.get('root_v1').touched) && (
+        <div style="display: flex; flex-direction: row">
+            <label
+                magic="label1"
+                class="label1Props"
+            >
+                root_v1:
+                </label>
+                <div>
+                    <input
+                        type="text"
+                        formControlName="root_v1"
+                        magic="root_v1"
+                        class="root_v1Props"
+                        pattern="^.{0,5}$"
+                    />
+                    <div *ngIf="(screenFormGroup.get('root_v1').touched) && (
                         screenFormGroup.get('root_v1').hasError('pattern')
                         
                         )">
-                    <p>control status: {{ screenFormGroup.get('root_v1').errors | json }}</p>
+                        <p>control status: {{ screenFormGroup.get('root_v1').errors | json }}</p>
+                    </div>
                 </div>
-            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
             <label
                 magic="Label9"
                 class="Label9Props"
             >
                 Named Router Outlet
                 </label>
-                <label
-                    magic="Label10"
-                    class="Label10Props"
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                magic="Label10"
+                class="Label10Props"
+            >
+                Default Router Outlet
+                </label>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                magic="Label11"
+                class="Label11Props"
+            >
+                SubForm
+                </label>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <button
+                magic="Button4"
+                class="Button4Props"
+            >
+                {{mgGetValue('Button4')}}
+                </button>
+                <button
+                    magic="Button5"
+                    class="Button5Props"
                 >
-                    Default Router Outlet
-                    </label>
-                    <label
-                        magic="Label11"
-                        class="Label11Props"
+                    {{mgGetValue('Button5')}}
+                    </button>
+                    <button
+                        magic="Button7"
+                        class="Button7Props"
                     >
-                        SubForm
-                        </label>
-                        <button
-                            magic="Button4"
-                            class="Button4Props"
-                        >
-                            {{mgGetValue('Button4')}}
-                            </button>
-                            <button
-                                magic="Button5"
-                                class="Button5Props"
-                            >
-                                {{mgGetValue('Button5')}}
-                                </button>
-                                <button
-                                    magic="Button7"
-                                    class="Button7Props"
-                                >
-                                    {{mgGetValue('Button7')}}
-                                    </button>
-                                    <button
-                                        magic="Button12"
-                                        class="Button12Props"
-                                    >
-                                        {{mgGetValue('Button12')}}
-                                        </button>
-                                        <button
-                                            magic="Button13"
-                                            class="Button13Props"
-                                        >
-                                            {{mgGetValue('Button13')}}
-                                            </button>
-                                            <div class="Subform3Props">
-                                                <router-outlet
-                                                    magic="Subform3"
-                                                    class="Subform3Props"
-                                                    name="Subform3"
-                                                >
-                                                    </router-outlet>
-                                            </div>
-                                            <div class="RouterOutlet1Props">
-                                                <router-outlet
-                                                    magic="RouterOutlet1"
-                                                    class="RouterOutlet1Props"
-                                                >
-                                                    </router-outlet>
-                                            </div>
-                                            <div class="Subform8Props">
-                                                <m-subform
-                                                    magic="Subform8"
-                                                    class="Subform8Props"
-                                                >
-                                                    </m-subform>
-                                            </div>
-                                            </div>
-                                            </form>
+                        {{mgGetValue('Button7')}}
+                        </button>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <button
+                magic="Button12"
+                class="Button12Props"
+            >
+                {{mgGetValue('Button12')}}
+                </button>
+                <button
+                    magic="Button13"
+                    class="Button13Props"
+                >
+                    {{mgGetValue('Button13')}}
+                    </button>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <div class="Subform3Props">
+                <router-outlet
+                    magic="Subform3"
+                    class="Subform3Props"
+                    name="Subform3"
+                >
+                    </router-outlet>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <div class="RouterOutlet1Props">
+                <router-outlet
+                    magic="RouterOutlet1"
+                    class="RouterOutlet1Props"
+                >
+                    </router-outlet>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <m-subform
+                magic="Subform8"
+                class="Subform8Props"
+            >
+                </m-subform>
+        </div>
+        </div>
+        </form>

@@ -177,15 +177,11 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
     }
     if (!this.task.Records.includesLast) {
       let guiEvent: GuiEvent = new GuiEvent("getRows", "table", 0);
-      for (let i = pageIndex * pageSize ; i < pageSize  * ( pageIndex + 1)  ; i++) {
-        if (!this.task.Records.isRowCreated(i)) {
-          guiEvent.Line = i;
-          this.task.insertEvent(guiEvent);
-          break;
-        }
-      }
+      guiEvent.Line = pageIndex * pageSize;
+      this.task.insertEvent(guiEvent);
     }
   }
+
   onScrollDown() {
     if (!this.task.Records.includesLast){
       let guiEvent: GuiEvent = new GuiEvent("getRows", "table", 0)
@@ -218,7 +214,11 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
     }
   }
 
-  executeCommand(command: GuiCommand): void {
+  GetGuiTopIndex() : number {
+    return this.task.getTopIndex();
+  }
+
+executeCommand(command: GuiCommand): void {
     let rowId: string = (command.line || 0).toString();
     let controlId = command.CtrlName;
 
@@ -260,6 +260,12 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
         if (command.Operation === HtmlProperties.SelectedRow)
           this.selectRow(command.obj1); //template method that allow overwite
         break;
+
+      case CommandType.PROP_SET_USER_PROPERTY:
+        properties = this.task.Records.list[rowId].getControlMetadata(controlId);
+        properties.userProperties[command.Operation] = command.obj1;
+        break;
+
       case CommandType.SET_CLASS:
         properties = this.task.Records.list[rowId].getControlMetadata(controlId);
         properties.setClass(command.Operation, command.obj1);
@@ -387,6 +393,24 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
     let val = this.task.getValue(controlId, rowId);
     return val;
   }
+
+  mgGetCustomProperty(controlId, propertyName, rowId?) {
+    let userProperties;
+    if (isNullOrUndefined(rowId))
+      rowId = '0';
+    let rec = this.task.Records.list[rowId];
+    if (isNullOrUndefined(rec))
+      debugger;
+    else {
+      const controlMetadata = rec.getControlMetadata(controlId);
+
+      if (propertyName in controlMetadata.userProperties) {
+        userProperties = controlMetadata.userProperties[propertyName];
+      }
+    }
+    return userProperties;
+  }
+
 
   mgGetItemListValues(id) {
     return this.getProperty(id, HtmlProperties.ItemsList);

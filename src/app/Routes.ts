@@ -9,6 +9,7 @@ export const routes: Routes = [
       {
         path: 'SubA1',
         component: MagicRouterContainer,
+        outlet: 'SubformA3'
       }
     ]
   },
@@ -20,6 +21,7 @@ export const routes: Routes = [
       {
         path: 'SubA1',
         component: MagicRouterContainer,
+        outlet: 'SubformA3'
       }
     ]
   },

@@ -19,7 +19,7 @@ export class TaskMagicService {
   protected template: { [id: string]: string; };
 
   constructor(protected magic: MagicEngine) {
-
+    this.Records.setGuiTopIndex(0);
   }
 
   _taskId: string;
@@ -250,5 +250,9 @@ export class TaskMagicService {
 
   }
 
+  getTopIndex():number
+  {
+    return this.Records.getGuiTopIndex();
+  }
 }
 
