@@ -65,7 +65,7 @@ export class MagicDirectiveBase implements OnInit {
 
 
     this.htmlElement.addEventListener('change', ( e) => {
-      let guiEvent: GuiEvent = new GuiEvent("selectionchanged", this.id, this.rowId);
+      let guiEvent: GuiEvent = new GuiEvent("selectionchanged", this.id, +this.rowId);
 
       if ((<any>(event.target)).selectedIndex  !== undefined) {
         guiEvent.Value = (<any>(event.target)).selectedIndex.toString();
@@ -82,7 +82,7 @@ export class MagicDirectiveBase implements OnInit {
   private IsSameElement(command) {
     return (command.CtrlName === this.id &&
       (command.line == this.rowId ||
-      (command.line === 0 && isNullOrUndefined(this.rowId))));
+        (command.line === 0 && isNullOrUndefined(this.rowId))));
   }
   private regUpdatesUI() {
     this.task
@@ -139,18 +139,18 @@ export class MagicDirectiveBase implements OnInit {
         break;
 
       case HtmlProperties.Enabled:
-      let rowId: string = (command.line || 0).toString();
-      let controlId = command.CtrlName;
-      let c = this.task.getFormControl(rowId, controlId);
+        let rowId: string = (command.line || 0).toString();
+        let controlId = command.CtrlName;
+        let c = this.task.getFormControl(rowId, controlId);
 
-      if (!isNullOrUndefined(c)) {
-        if (command.obj1)
-          c.enable();
-        else
-          c.disable();
-      }
+        if (!isNullOrUndefined(c)) {
+          if (command.obj1)
+            c.enable();
+          else
+            c.disable();
+        }
 
-      break;
+        break;
     }
   }
 }

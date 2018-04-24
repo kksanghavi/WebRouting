@@ -218,7 +218,7 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
     return this.task.getTopIndex();
   }
 
-executeCommand(command: GuiCommand): void {
+  executeCommand(command: GuiCommand): void {
     let rowId: string = (command.line || 0).toString();
     let controlId = command.CtrlName;
 
@@ -278,7 +278,7 @@ executeCommand(command: GuiCommand): void {
 
       case CommandType.SET_ATTRIBUTE:
         properties = this.task.Records.list[rowId].getControlMetadata(controlId);
-        properties.dataType = String.fromCharCode(command.number);
+        properties.dataType = <StorageAttribute>String.fromCharCode(command.number);
         break;
 
       case  CommandType.SET_VALUE:
@@ -450,7 +450,7 @@ executeCommand(command: GuiCommand): void {
       else
         indexes[i] = (selectedOptions[i]).value;
     }
-    guiEvent.Value = indexes;
+    guiEvent.Value = <any>indexes; // TODO: fix
     this.task.insertEvent(guiEvent);
   }
 
@@ -535,7 +535,7 @@ executeCommand(command: GuiCommand): void {
 
 
 
-          let v = this.task.getValue(id, rowId);
+        let v = this.task.getValue(id, rowId);
         const dialogRef = dialog.open(TextEditDialogComponent, {
           width: dim.width + 'px',
           height: dim.height + 'px',
@@ -544,7 +544,7 @@ executeCommand(command: GuiCommand): void {
 
         dialogRef.updatePosition({top: dim.y - 15 + "px", left: dim.x + "px"});
         dialogRef.afterClosed().subscribe(result => {
-           if (result != null) {
+          if (result != null) {
             this.task.setValue(id, rowId, result);
             const fc = this.task.getFormControl(rowId, id);
             if (!isNullOrUndefined(result)) {

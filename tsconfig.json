@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -11,6 +12,13 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "paths": {
+      "@magic/mscorelib": ["D:/_Trunk/Sources/Webclient/@magic/mscorelib"],
+      "@magic/utils":     ["D:/_Trunk/Sources/Webclient/@magic/utils"    ],
+      "@magic/gui":       ["D:/_Trunk/Sources/Webclient/@magic/gui"      ],
+      "@magic/engine":    ["D:/_Trunk/Sources/Webclient/@magic/engine"   ]
+    },
+
     "lib": [
       "es2017",
       "dom"
