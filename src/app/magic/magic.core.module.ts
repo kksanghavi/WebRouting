@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {MagicEngine} from "./src/services/magic.engine";
+import {CommandsCollector} from './src/services/CommandsCollector';
 import {MagicFullControlDirective} from "./src/ui/magic-fullcontrol-directive.directive";
 import {MagicNoControlDirective} from "./src/ui/magic-nocontrol-directive.directive";
 import {MagicDefaultValueAccessor, MagicFormControlNameDirective} from "./src/ui/magic.form-control-name.directive";
@@ -59,6 +60,7 @@ export class MagicModule {
       ngModule: MagicModule,
       providers: [
         MagicEngine,
+        CommandsCollector
       ]
     }
   }

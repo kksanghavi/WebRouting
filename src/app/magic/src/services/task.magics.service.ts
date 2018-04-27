@@ -132,7 +132,7 @@ export class TaskMagicService {
       .filter(command => command.TaskTag === this.taskId)
       .subscribe(command => {
         // console.log("Task " + command.TaskTag + "command " + command.CommandType);
-        this.refreshDom.next(command);
+        this.executeCommand(command);
       });
     this.magic.interactiveCommands
       .filter(command => command.TaskTag === this.taskId)
@@ -141,6 +141,10 @@ export class TaskMagicService {
         this.interactiveCommands.next(command);
       });
 
+  }
+
+  executeCommand(command: GuiCommand) {
+    this.refreshDom.next(command);
   }
 
   insertEvent(guiEvent: GuiEvent) {

@@ -20,6 +20,7 @@ import {GuiInteractiveExecutor} from './GuiInteractiveExecutor';
 import {TextEditDialogComponent} from "./TextEditDialog/textedit.dialog";
 
 import {Router, ActivatedRoute} from '@angular/router';
+import {CommandsCollector} from '../services/CommandsCollector';
 
 @Component({
   selector: 'task-magic',
@@ -52,7 +53,8 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
   constructor(protected ref: ChangeDetectorRef,
               protected task: TaskMagicService,
               protected router: Router,
-              protected activatedRoute: ActivatedRoute
+              protected activatedRoute: ActivatedRoute,
+              protected pendingCommandsCollector: CommandsCollector
               //protected magic:MagicEngine
 
   ) {
@@ -117,6 +119,8 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
       this.ref.detectChanges();
     }
     else {
+      this.pendingCommandsCollector.startCollecting(taskId);
+
       BaseTaskMagicComponent.routeInfo = {
         formName,
         parameters: {myTaskId: taskId, taskDescription: taskDescription}
@@ -146,6 +150,15 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
     this.task.buildScreenModeControls();
     this.task.initTask();
     this.regUpdatesUI();
+
+    // If commands were issued for this task before ngOnInit(), they were not executed because task had not registered for them.
+    // So, execute them now.
+    const pendingCommands: GuiCommand[] = this.pendingCommandsCollector.GetCommands(this.taskId);
+    if (pendingCommands.length > 0) {
+      pendingCommands.forEach(command => {this.task.executeCommand(command);});
+
+      this.pendingCommandsCollector.stopCollecting(this.taskId);
+    }
   }
 
   mgGetFormGroupByRow(id: string): FormGroup {
