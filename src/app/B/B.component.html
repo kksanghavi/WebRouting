@@ -26,7 +26,7 @@
                         screenFormGroup.get('B_v1').hasError('pattern')
                         
                         )">
-                        <p>control status: {{ screenFormGroup.get('B_v1').errors | json }}</p>
+                        <p>{{ showErrMsg('B_v1') }}</p>
                     </div>
                 </div>
         </div>

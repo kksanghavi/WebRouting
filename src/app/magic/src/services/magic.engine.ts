@@ -25,6 +25,7 @@ export class MagicEngine {
           }
         }
         catch (e) {
+          console.error(e.message + "\n" + e.stack);
           console.log('magic engine not found');
           console.log('moving to stub mode');
           this.isStub = true;
@@ -62,7 +63,7 @@ export class MagicEngine {
   GetFldRanges(taskId: string, controlName: string): string {
     return this.magic.GetFldRanges(taskId, controlName);
   }
-  
+
   saveData(data:string)
   {
     //this.magic.saveData(data);

@@ -19,6 +19,11 @@
       "path": "B/",
       "name": "B",
       "uniqueName": "B_B"
+    },
+    {
+      "path": "overlay/",
+      "name": "overlay",
+      "uniqueName": "overlay_overlay"
     }
   ]
 }

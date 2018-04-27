@@ -214,6 +214,18 @@ export abstract class BaseTaskMagicComponent implements OnInit, OnDestroy {
     }
   }
 
+  showErrMsg(id: string): string
+  {
+    let c = this.task.getFormControl('0', id);
+    if (c.hasError('required'))
+      return 'Control must be updated.';
+    if (c.hasError('pattern'))
+      return 'Required pattern is :' + c.errors.pattern.requiredPattern;
+    if (c.hasError('rangevalidator'))
+      return c.errors.rangevalidator.errorMsg;
+    return 'unknown error';
+  }
+
   GetGuiTopIndex() : number {
     return this.task.getTopIndex();
   }
