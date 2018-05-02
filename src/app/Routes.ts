@@ -1,5 +1,5 @@
 import {Routes} from '@angular/router';
-import {MagicRouterContainer} from './magic/src/ui/MagicRouterContainer';
+import {MagicRouterContainer} from '@magic-xpa/angular';
 
 export const routes: Routes = [
   {

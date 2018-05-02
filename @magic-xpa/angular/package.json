@@ -1,0 +1,33 @@
+{
+  "name": "@magic-xpa/angular",
+  "version": "0.0.4",
+  "license": "UNLICENSED",
+
+  "dependencies": {
+    "@magic-xpa/engine"   : "*",
+    "@magic-xpa/angular-material-core"   : "*"
+
+  },
+  "peerDependencies": {
+    "@angular/core"  : "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/forms" : "^5.0.0",
+
+    "@magic-xpa/gui"      : "*" ,
+    "@magic-xpa/utils"    : "*" ,
+    "@magic-xpa/mscorelib": "*",
+    "rxjs": "^5.5.8",
+    "ng-dynamic-component" : "^2.1.0"
+  },
+  "ngPackage": {
+    "$schema": "../../node_modules/ng-packagr/package.schema.json",
+    "dest": "../../libs/magic-xpa-angular",
+    "workingDirectory": "../ng_build",
+    "whitelistedNonPeerDependencies": [
+      "."
+    ],
+    "lib": {
+      "entryFile": "index.ts"
+    }
+  }
+}

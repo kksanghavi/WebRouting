@@ -1,50 +1,61 @@
-import {BrowserModule} from "@angular/platform-browser";
-import {NgModule} from "@angular/core";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpModule, JsonpModule} from "@angular/http";
-import {MagicModule} from "./magic/magic.core.module";
-import {AppComponent} from "./app.component";
-import {DynamicModule} from "ng-dynamic-component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {ComponentsList} from "./ComponentList";
-import {ThemeModule} from "./magic/src/ui/theme/theme.module";
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {ReactiveFormsModule} from '@angular/forms';
+
+import {AppComponent} from './app.component';
+import {DynamicModule} from 'ng-dynamic-component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ComponentArray, compHash, title} from './component-list.g';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {CalendarModule} from 'primeng/components/calendar/calendar';
-import {MatTableModule, MatPaginatorModule, MatInputModule,  MatDialogModule, MatTooltipModule} from '@angular/material';
-import {TextEditDialogComponent} from './magic/src/ui/TextEditDialog/textedit.dialog';
+import {
+   MatButtonModule, MatCheckboxModule, MatDialogModule, MatInputModule, MatListModule, MatPaginatorModule, MatSelectModule, MatTableModule,
+   MatTabsModule, MatCardModule,
+   MatTooltipModule
+} from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {routes} from './Routes';
+import {MagicModule,ComponentListService} from '@magic-xpa/angular';
+import {MagicAngularMaterialModule} from '@magic-xpa/angular-material-core';
 
-const comps = ComponentsList.getAllComponents();
 
 @NgModule({
-   declarations: [AppComponent, TextEditDialogComponent, ...comps],
-   imports     : [
+   declarations: [AppComponent, ...ComponentArray],
+   imports: [
+      // Angular modules
       BrowserModule,
-      FormsModule,
-      HttpModule,
-      JsonpModule,
       ReactiveFormsModule,
+      RouterModule.forRoot(routes),
+
+      // Material modules
       BrowserAnimationsModule,
-      InfiniteScrollModule,
-      DynamicModule.withComponents(comps),
-      MagicModule.forRoot(),
-      CalendarModule,
       MatTableModule,
       MatPaginatorModule,
-      MatDialogModule,
       MatInputModule,
-      ThemeModule,
+      MatButtonModule,
+      MatListModule,
+      MatCheckboxModule,
+      MatTabsModule,
+      MatDialogModule,
+      MatSelectModule,
       MatTooltipModule,
-      RouterModule.forRoot(routes)
-   ],
-   exports     : [FormsModule, ReactiveFormsModule, InfiniteScrollModule, MatTableModule, MatPaginatorModule],
-   providers   : [],
+      MatCardModule,
 
+      // NgPrime modules
+      CalendarModule,
+
+      // Magic modules
+      MagicModule.forRoot(),
+      MagicAngularMaterialModule,
+      InfiniteScrollModule,
+      DynamicModule.withComponents(ComponentArray)
+   ],
    bootstrap: [AppComponent],
-   entryComponents: [ TextEditDialogComponent]
 })
-export class AppModule
-{
-   constructor() {}
+export class AppModule {
+   constructor(componentList:ComponentListService) {
+      componentList.addComponents(compHash);
+      componentList.title = title;
+   }
+
 }

@@ -1,9 +1,13 @@
 import { Component } from "@angular/core";
 
-import { BaseModalComponent } from "../magic/src/ui/magic-modal/magic-baseModalComponent";
-import { WindowType, WindowPosition } from "@magic/utils";
+import { BaseModalComponent } from "@magic-xpa/angular";
+import { WindowType, WindowPosition } from "@magic-xpa/utils";
 
-import { TaskMagicService } from "../magic/src/services/task.magics.service";
+import {
+	TaskMagicService,
+	ComponentListService,
+	CommandsCollector
+} from "@magic-xpa/angular";
 
 @Component({
 	selector: "mga-overlay",

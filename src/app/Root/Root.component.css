@@ -10,18 +10,6 @@
 
 .root_v1Props {}
 
-.Label9Props {
-    overflow: hidden;
-}
-
-.Label10Props {
-    overflow: hidden;
-}
-
-.Label11Props {
-    overflow: hidden;
-}
-
 .Button4Props {}
 
 .Button5Props {}
@@ -32,14 +20,22 @@
 
 .Button13Props {}
 
-.Subform3Props {
-    border: lightskyblue solid 1px;
+.btn6_0001Props {}
+
+.Label9Props {
+    overflow: hidden;
 }
 
-.RouterOutlet1Props {
-    border: lightskyblue solid 1px;
+.Subform3Props {}
+
+.Label10Props {
+    overflow: hidden;
 }
 
-.Subform8Props {
-    border: lightskyblue solid 1px;
+.RouterOutlet1Props {}
+
+.Label11Props {
+    overflow: hidden;
 }
+
+.Subform8Props {}

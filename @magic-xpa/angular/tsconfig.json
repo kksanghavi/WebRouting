@@ -1,0 +1,10 @@
+{
+  "extends"        : "../tsconfig.base.json",
+  "paths": {
+    "@magic-xpa/mscorelib": ["../@magic-xpa/mscorelib"],
+    "@magic-xpa/utils"    : ["../@magic-xpa/utils"],
+    "@magic-xpa/gui"      : ["../@magic-xpa/gui"],
+    "@magic-xpa/engine"   : ["../@magic-xpa/engine"]
+  },
+}
+

@@ -31,5 +31,74 @@
                     </div>
                 </div>
         </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                magic="Label4"
+                class="Label4Props mgFont1"
+            >
+                overlay_v2
+                </label>
+                <div>
+                    <input
+                        type="text"
+                        formControlName="overlay_v2"
+                        magic="overlay_v2"
+                        class="overlay_v2Props"
+                        pattern="^.{0,20}$"
+                    />
+                    <div *ngIf="(screenFormGroup.get('overlay_v2').touched) && (
+                        screenFormGroup.get('overlay_v2').hasError('pattern')
+                        
+                        )">
+                        <p>{{ showErrMsg('overlay_v2') }}</p>
+                    </div>
+                </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                magic="Label6"
+                class="Label6Props mgFont1"
+            >
+                overlay_v3
+                </label>
+                <div>
+                    <input
+                        type="text"
+                        formControlName="overlay_v3"
+                        magic="overlay_v3"
+                        class="overlay_v3Props"
+                        pattern="^.{0,20}$"
+                    />
+                    <div *ngIf="(screenFormGroup.get('overlay_v3').touched) && (
+                        screenFormGroup.get('overlay_v3').hasError('pattern')
+                        
+                        )">
+                        <p>{{ showErrMsg('overlay_v3') }}</p>
+                    </div>
+                </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                magic="Label8"
+                class="Label8Props mgFont1"
+            >
+                overlay_v4
+                </label>
+                <div>
+                    <input
+                        type="text"
+                        formControlName="overlay_v4"
+                        magic="overlay_v4"
+                        class="overlay_v4Props"
+                        pattern="^.{0,20}$"
+                    />
+                    <div *ngIf="(screenFormGroup.get('overlay_v4').touched) && (
+                        screenFormGroup.get('overlay_v4').hasError('pattern')
+                        
+                        )">
+                        <p>{{ showErrMsg('overlay_v4') }}</p>
+                    </div>
+                </div>
+        </div>
         </div>
         </form>
