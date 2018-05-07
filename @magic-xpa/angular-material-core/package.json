@@ -2,26 +2,24 @@
   "name": "@magic-xpa/angular-material-core",
   "version": "0.0.2",
   "license": "UNLICENSED",
-  "dependencies": {
-
-  },
   "peerDependencies": {
-    "@angular/core"  : "^5.0.0",
-    "@angular/common": "^5.0.0",
-    "@angular/forms" : "^5.0.0",
-    "@angular/material" : "^5.2.5",
-    "@magic-xpa/angular" : "*"
-
+    "@angular/core": "^6.0.0",
+    "@angular/common": "^6.0.0",
+    "@angular/forms": "^6.0.0",
+    "@angular/material": "^6.0.0",
+    "@magic-xpa/angular": "*"
   },
-  "ngPackage": {
-    "$schema": "../../node_modules/ng-packagr/package.schema.json",
-    "dest": "../../libs/magic-xpa-angular-material-core",
-    "workingDirectory": "../ng_build",
-    "whitelistedNonPeerDependencies": [
-      "."
-    ],
-    "lib": {
-      "entryFile": "index.ts"
-    }
+  "main": "bundles/magic-xpa-angular-material-core.umd.js",
+  "module": "fesm5/magic-xpa-angular-material-core.js",
+  "es2015": "fesm2015/magic-xpa-angular-material-core.js",
+  "esm5": "esm5/magic-xpa-angular-material-core.js",
+  "esm2015": "esm2015/magic-xpa-angular-material-core.js",
+  "fesm5": "fesm5/magic-xpa-angular-material-core.js",
+  "fesm2015": "fesm2015/magic-xpa-angular-material-core.js",
+  "typings": "magic-xpa-angular-material-core.d.ts",
+  "metadata": "magic-xpa-angular-material-core.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
   }
 }

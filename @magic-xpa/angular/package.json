@@ -2,32 +2,29 @@
   "name": "@magic-xpa/angular",
   "version": "0.0.4",
   "license": "UNLICENSED",
-
   "dependencies": {
-    "@magic-xpa/engine"   : "*",
-    "@magic-xpa/angular-material-core"   : "*"
-
+    "@magic-xpa/engine": "*",
+    "@magic-xpa/angular-material-core": "*",
+    "tslib": "^1.9.0"
   },
   "peerDependencies": {
-    "@angular/core"  : "^5.0.0",
-    "@angular/common": "^5.0.0",
-    "@angular/forms" : "^5.0.0",
-
-    "@magic-xpa/gui"      : "*" ,
-    "@magic-xpa/utils"    : "*" ,
+    "@angular/core": "^6.0.0",
+    "@angular/common": "^6.0.0",
+    "@angular/forms": "^6.0.0",
+    "@magic-xpa/gui": "*",
+    "@magic-xpa/utils": "*",
     "@magic-xpa/mscorelib": "*",
-    "rxjs": "^5.5.8",
-    "ng-dynamic-component" : "^2.1.0"
+    "rxjs": "^6.1.0",
+    "ng-dynamic-component": "^2.3.0"
   },
-  "ngPackage": {
-    "$schema": "../../node_modules/ng-packagr/package.schema.json",
-    "dest": "../../libs/magic-xpa-angular",
-    "workingDirectory": "../ng_build",
-    "whitelistedNonPeerDependencies": [
-      "."
-    ],
-    "lib": {
-      "entryFile": "index.ts"
-    }
-  }
+  "main": "bundles/magic-xpa-angular.umd.js",
+  "module": "fesm5/magic-xpa-angular.js",
+  "es2015": "fesm2015/magic-xpa-angular.js",
+  "esm5": "esm5/magic-xpa-angular.js",
+  "esm2015": "esm2015/magic-xpa-angular.js",
+  "fesm5": "fesm5/magic-xpa-angular.js",
+  "fesm2015": "fesm2015/magic-xpa-angular.js",
+  "typings": "magic-xpa-angular.d.ts",
+  "metadata": "magic-xpa-angular.metadata.json",
+  "sideEffects": false
 }

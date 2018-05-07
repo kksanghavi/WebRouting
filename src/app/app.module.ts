@@ -7,11 +7,12 @@ import {DynamicModule} from 'ng-dynamic-component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ComponentArray, compHash, title} from './component-list.g';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
-import {CalendarModule} from 'primeng/components/calendar/calendar';
 import {
    MatButtonModule, MatCheckboxModule, MatDialogModule, MatInputModule, MatListModule, MatPaginatorModule, MatSelectModule, MatTableModule,
    MatTabsModule, MatCardModule,
-   MatTooltipModule
+   MatTooltipModule, MatRadioModule,
+   MatDatepickerModule, MatNativeDateModule
+
 } from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {routes} from './Routes';
@@ -40,9 +41,9 @@ import {MagicAngularMaterialModule} from '@magic-xpa/angular-material-core';
       MatSelectModule,
       MatTooltipModule,
       MatCardModule,
-
-      // NgPrime modules
-      CalendarModule,
+      MatRadioModule,
+      MatDatepickerModule,
+      MatNativeDateModule,
 
       // Magic modules
       MagicModule.forRoot(),
