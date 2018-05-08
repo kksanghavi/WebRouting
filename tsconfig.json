@@ -13,10 +13,10 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@magic-xpa/mscorelib": ["D:/_Trunk/Sources/Webclient/dist/mscorelib"],
-      "@magic-xpa/utils":     ["D:/_Trunk/Sources/Webclient/dist/utils"    ],
-      "@magic-xpa/gui":       ["D:/_Trunk/Sources/Webclient/dist/gui"      ],
-      "@magic-xpa/engine":    ["D:/_Trunk/Sources/Webclient/dist/engine"   ],
+      "@magic-xpa/mscorelib": ["D:/_Trunk/Sources/Webclient/projects/mscorelib"],
+      "@magic-xpa/utils":     ["D:/_Trunk/Sources/Webclient/projects/utils"    ],
+      "@magic-xpa/gui":       ["D:/_Trunk/Sources/Webclient/projects/gui"      ],
+      "@magic-xpa/engine":    ["D:/_Trunk/Sources/Webclient/projects/engine"   ],
       "@magic-xpa/angular":                 ["../@magic-xpa/angular"   ],
       "@magic-xpa/angular-material-core":   ["../@magic-xpa/angular-material-core" ]
     },
